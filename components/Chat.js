@@ -165,6 +165,10 @@ export default class Chat extends React.Component {
     }
   }
 
+  renderCustomActions = (props) => {
+    return <CustomActions {...props} />;
+  };
+
   renderCustomView(props) {
     const { currentMessage } = props;
     if (currentMessage.location) {
