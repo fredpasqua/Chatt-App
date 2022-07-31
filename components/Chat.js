@@ -120,12 +120,13 @@ export default class Chat extends React.Component {
   }
 
   addMessage = (message) => {
+    console.log(message);
     this.referenceChatMessages.add({
       _id: message._id,
       text: message.text || "",
       user: message.user,
       createdAt: message.createdAt,
-      location: message.location,
+      location: message.location || "",
     });
   };
 
