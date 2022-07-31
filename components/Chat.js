@@ -125,6 +125,7 @@ export default class Chat extends React.Component {
       text: message.text || "",
       user: message.user,
       createdAt: message.createdAt,
+      location: message.location,
     });
   };
 
@@ -151,6 +152,7 @@ export default class Chat extends React.Component {
         text: data.text,
         createdAt: data.createdAt.toDate(),
         user: data.user,
+        location: data.location,
       });
       this.setState({
         messages,

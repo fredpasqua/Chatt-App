@@ -80,6 +80,7 @@ export default class CustomActions extends Component {
               longitude: result.coords.longitude,
               latitude: result.coords.latitude,
             },
+            text: "My Location",
           });
         }
       }
@@ -153,6 +154,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     backgroundColor: "transparent",
     textAlign: "center",
+    marginTop: -2,
   },
 });
 
