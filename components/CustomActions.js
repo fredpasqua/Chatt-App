@@ -71,6 +71,7 @@ export default class CustomActions extends Component {
         const result = await Location.getCurrentPositionAsync({}).catch(
           (error) => console.log(error)
         );
+        console.log(result);
         const longitude = JSON.stringify(result.coords.longitude);
         const latitude = JSON.stringify(result.coords.latitude);
         if (result) {

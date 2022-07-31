@@ -122,7 +122,7 @@ export default class Chat extends React.Component {
   addMessage = (message) => {
     this.referenceChatMessages.add({
       _id: message._id,
-      text: message.text,
+      text: message.text || "",
       user: message.user,
       createdAt: message.createdAt,
     });
@@ -174,7 +174,7 @@ export default class Chat extends React.Component {
     if (currentMessage.location) {
       return (
         <MapView
-          style={{ width: 150, height: 100, borderRadius: 13, margin: 3 }}
+          style={{ width: 200, height: 200, borderRadius: 13, margin: 3 }}
           region={{
             latitude: currentMessage.location.latitude,
             longitude: currentMessage.location.longitude,
@@ -182,13 +182,12 @@ export default class Chat extends React.Component {
             longitudeDelta: 0.0421,
           }}
         >
-          {/*some code to work on later}
-          {/* <Marker
+          <Marker
             coordinate={{
-              latitude: location.result.coords.latitude,
-              longitude: location.result.coords.longitude,
+              latitude: currentMessage.location.latitude,
+              longitude: currentMessage.location.longitude,
             }}
-          /> */}
+          />
         </MapView>
       );
     }
