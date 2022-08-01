@@ -41,6 +41,7 @@ export default class Chat extends React.Component {
       uid: 0,
       name: "",
       isConnected: false,
+      image: null,
     };
   }
   async getMessages() {
@@ -127,6 +128,7 @@ export default class Chat extends React.Component {
       user: message.user,
       createdAt: message.createdAt,
       location: message.location || "",
+      image: message.image || "",
     });
   };
 
@@ -154,6 +156,7 @@ export default class Chat extends React.Component {
         createdAt: data.createdAt.toDate(),
         user: data.user,
         location: data.location,
+        image: data.image,
       });
       this.setState({
         messages,
@@ -185,12 +188,12 @@ export default class Chat extends React.Component {
             longitudeDelta: 0.0421,
           }}
         >
-          <Marker
+          {/* <Marker
             coordinate={{
               latitude: currentMessage.location.latitude,
               longitude: currentMessage.location.longitude,
             }}
-          />
+          /> */}
         </MapView>
       );
     }
