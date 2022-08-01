@@ -188,12 +188,12 @@ export default class Chat extends React.Component {
             longitudeDelta: 0.0421,
           }}
         >
-          {/* <Marker
+          <Marker
             coordinate={{
               latitude: currentMessage.location.latitude,
               longitude: currentMessage.location.longitude,
             }}
-          /> */}
+          />
         </MapView>
       );
     }
