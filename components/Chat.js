@@ -1,17 +1,6 @@
 import React from "react";
-import {
-  View,
-  Platform,
-  Text,
-  KeyboardAvoidingView,
-  StyleSheet,
-} from "react-native";
-import {
-  GiftedChat,
-  Bubble,
-  renderBubble,
-  InputToolbar,
-} from "react-native-gifted-chat";
+import { View, Platform, KeyboardAvoidingView, StyleSheet } from "react-native";
+import { GiftedChat, Bubble, InputToolbar } from "react-native-gifted-chat";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import NetInfo from "@react-native-community/netinfo";
 import CustomActions from "./CustomActions";
